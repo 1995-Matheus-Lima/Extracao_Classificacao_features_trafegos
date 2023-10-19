@@ -1,0 +1,64 @@
+frame:
+	frame.len
+	frame.cap_len
+	frame.marked
+	frame.ignored
+ip:
+	ip.hdr_len
+	ip.len
+	ip.ttl
+	ip.src
+	ip.dst
+	
+	ip.flags_tree:
+		ip.flags.rb
+		ip.flags.df
+		ip.flags.mf
+icmp:
+	ip:
+		ip.hdr_len 
+		ip.len
+		ip.ttl
+		
+		ip.dsfield_tree:
+			ip.dsfield.dscp
+			ip.dsfield.ecn  
+	udp:
+tcp:	
+	tcp.stream
+	tcp.completeness
+	tcp.len
+	tcp.ack
+	tcp.hdr_len
+		tcp.flags_tree:	
+		    tcp.flags.res: 0,
+		    tcp.flags.ns: 0,
+		    tcp.flags.cwr: 0,
+		    tcp.flags.ecn: 0,
+		    tcp.flags.urg: 0,
+		    tcp.flags.ack: 1,
+		    tcp.flags.push: 0,
+		    tcp.flags.reset: 0,
+		    tcp.flags.syn: 0,
+		    tcp.flags.fin: 0,
+	tcp.window_size_value
+	tcp.window_size_scalefactor
+	tcp.urgent_pointer
+	Timestamp:
+		tcp.time_relative
+		tcp.time_delta
+	tcp.analysis:
+		tcp.analysis.bytes_in_flight
+		tcp.analysis.push_bytes_sent
+
+normal
+10:39:35   
+10:47:35
+
+Infecção
+10:47:35
+10:52:35
+
+Atack
+10:52:35
+10:55:35
